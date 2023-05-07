@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+body {
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1D2026;
+  gap: 60px;
+}
+
+.diagram-wrapper {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  font-family: Roboto;
+  color: #28BEB2;
+}
+
+button {
+  align-self: center;
+  width: 224px;
+  height: 48px;
+
+  background: #20958B;
+
+  box-shadow: 2px 3px 11px rgba(0, 0, 0, 0.23);
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 24px;
+  font-family: Roboto;
+  font-style: normal;
+
+  color: #EAEAEA;
+  text-shadow: 4px 7px 15px rgba(0, 0, 0, 0.29);
+}
+
+.diagram-container {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 505px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+
+
+.diagram-item {
+  width: 340px;
+  height: 100px;
+  background: #1D2026;
+  /* голубой текст */
+
+  border: 3px solid #28BEB2;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+
+  text-align: center;
+
+
+
+  color: #28BEB2;
+}
+
+.diagram-item-first {
+  border-color: #90c0bc;
+}
+
+.diagram-item-last {
+  border-color: #90c0bc;
+}
