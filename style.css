@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
+
+
 body {
   margin: 0 auto;
   margin-top: 100px;
@@ -12,6 +14,7 @@ body {
 
 .diagram-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 h1 {
@@ -38,25 +41,31 @@ button {
 
   color: #EAEAEA;
   text-shadow: 4px 7px 15px rgba(0, 0, 0, 0.29);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #327e6b;
 }
 
 .diagram-container {
-  margin: 0 auto;
+  padding-left: 17%;
   max-width: 1440px;
   min-height: 505px;
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 80px;
 }
 
 
 
 .diagram-item {
+  position: relative;
   width: 340px;
   height: 100px;
   background: #1D2026;
   /* голубой текст */
-
   border: 3px solid #28BEB2;
   border-radius: 3px;
 
@@ -84,4 +93,236 @@ button {
 
 .diagram-item-last {
   border-color: #90c0bc;
+}
+
+.diagram-item:nth-child(1)::after {
+  position: absolute;
+  content: url(horizontal-arrow.svg);
+  left: 100%;
+}
+
+.diagram-item:nth-child(2)::after {
+  position: absolute;
+  content: url(horizontal-arrow.svg);
+  left: 100%;
+}
+
+.diagram-item:nth-child(3)::after {
+  position: absolute;
+  content: url(vertical-arrow.svg);
+  top: 100%;
+}
+
+.diagram-item:nth-child(4)::before {
+  position: absolute;
+  content: url(horizontal-arrow.svg);
+  transform: scale(-1, 1);
+  right: 100%;
+}
+
+.diagram-item:nth-child(5)::before {
+  position: absolute;
+  content: url(horizontal-arrow.svg);
+  transform: scale(-1, 1);
+  right: 100%;
+}
+
+.diagram-item:nth-child(6)::after {
+  position: absolute;
+  content: url(vertical-arrow.svg);
+  top: 100%;
+}
+
+.diagram-item:nth-child(7)::after {
+  position: absolute;
+  content: url(horizontal-arrow.svg);
+  left: 100%;
+}
+
+
+.diagram-item:nth-child(1) {
+  order: 1;
+}
+
+.diagram-item:nth-child(2) {
+  order: 2;
+}
+
+.diagram-item:nth-child(3) {
+  order: 3;
+}
+
+.diagram-item:nth-child(4) {
+  order: 6;
+}
+
+.diagram-item:nth-child(5) {
+  order: 5;
+}
+
+.diagram-item:nth-child(6) {
+  order: 4;
+}
+
+.diagram-item:nth-child(7) {
+  order: 7;
+}
+
+.diagram-item:nth-child(8) {
+  order: 8;
+}
+
+@media (min-width: 929px) and (max-width: 1442px) {
+
+  .diagram-item:nth-child(1)::after {
+    position: absolute;
+    content: url(horizontal-arrow.svg);
+    left: 100%;
+  }
+
+  .diagram-item:nth-child(2)::after {
+    position: absolute;
+    content: url(vertical-arrow.svg);
+    top: 100%;
+    left: 45%;
+  }
+
+  .diagram-item:nth-child(3)::after {
+    position: absolute;
+    content: url(horizontal-arrow.svg);
+    transform: scale(-1, 1);
+    top: 30%;
+    right: 100%;
+  }
+
+  .diagram-item:nth-child(4)::before {
+    position: absolute;
+    content: url(vertical-arrow.svg);
+    left: 55%;
+    top: 100%;
+  }
+
+  .diagram-item:nth-child(5)::before {
+    position: absolute;
+    content: url(horizontal-arrow.svg);
+    transform: scale(1, -1);
+    top: 20%;
+    left: 100%;
+  }
+
+
+  .diagram-item:nth-child(6)::after {
+    position: absolute;
+    content: url(vertical-arrow.svg);
+    top: 100%;
+  }
+
+  .diagram-item:nth-child(7)::after {
+    position: absolute;
+    content: url(horizontal-arrow.svg);
+    transform: scale(-1, 1);
+    left: -22%;
+  }
+
+
+  .diagram-item:nth-child(1) {
+    order: 1;
+  }
+
+  .diagram-item:nth-child(2) {
+    order: 2;
+  }
+
+  .diagram-item:nth-child(3) {
+    order: 4;
+  }
+
+  .diagram-item:nth-child(4) {
+    order: 3;
+  }
+
+  .diagram-item:nth-child(5) {
+    order: 5;
+  }
+
+  .diagram-item:nth-child(6) {
+    order: 6;
+  }
+
+  .diagram-item:nth-child(7) {
+    order: 8;
+  }
+
+  .diagram-item:nth-child(8) {
+    order: 7;
+  }
+}
+
+@media (max-width: 928px) {
+
+  .diagram-item:nth-child(odd)::after {
+    content: none;
+  }
+
+  .diagram-item:nth-child(even)::after {
+    content: none;
+  }
+
+  .diagram-item:nth-child(odd)::before {
+    content: none;
+  }
+
+  .diagram-item:nth-child(even)::before {
+    content: none;
+  }
+
+  .diagram-item:nth-child(even)::after {
+    position: absolute;
+    content: url(vertical-arrow.svg);
+    left: 45%;
+    top: 100%;
+  }
+
+  .diagram-item:nth-child(odd)::after {
+    position: absolute;
+    content: url(vertical-arrow.svg);
+    left: 45%;
+    top: 100%;
+  }
+
+  .diagram-item:last-child::after {
+    content: none;
+  }
+
+  .diagram-item:nth-child(1) {
+    order: 1;
+  }
+
+  .diagram-item:nth-child(2) {
+    order: 2;
+  }
+
+  .diagram-item:nth-child(3) {
+    order: 3;
+  }
+
+  .diagram-item:nth-child(4) {
+    order: 4;
+  }
+
+  .diagram-item:nth-child(5) {
+    order: 5;
+  }
+
+  .diagram-item:nth-child(6) {
+    order: 6;
+  }
+
+  .diagram-item:nth-child(7) {
+    order: 7;
+  }
+
+  .diagram-item:nth-child(8) {
+    order: 8;
+  }
 }
